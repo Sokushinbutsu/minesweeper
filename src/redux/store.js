@@ -1,9 +1,11 @@
-const { toggleSquare, plantFlag } = require('./actions.js');
-const { mineSweeper } = require('./reducers.js');
-const { createStore } = require('redux');
-const store = createStore(mineSweeper);
+import mineSweeper from './reducers.js';
+import { createStore } from 'redux';
+
+const store = createStore(
+  mineSweeper,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 store.subscribe(() => console.dir(JSON.stringify(store.getState())));
 
-// store.dispatch(toggleSquare(0, 0));
-// store.dispatch(plantFlag(0, 0));
+export default store;

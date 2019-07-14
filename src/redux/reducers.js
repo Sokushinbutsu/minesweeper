@@ -7,7 +7,7 @@ const initialState = {
   board: generateBoard()
 };
 
-function mineSweeper(state = initialState, action) {
+const mineSweeper = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_SQUARE:
       return {
@@ -41,6 +41,6 @@ function mineSweeper(state = initialState, action) {
     default:
       return state;
   }
-}
+};
 
-module.exports.mineSweeper = mineSweeper;
+export default mineSweeper;
