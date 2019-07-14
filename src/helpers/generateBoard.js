@@ -10,7 +10,7 @@ const generateBoard = () => {
   for (let i = 0; i < BOARD_SIZE; i++) {
     let row = [];
     for (let j = 0; j < BOARD_SIZE; j++) {
-      row.push({ clicked: false, isBomb: false });
+      row.push({ clicked: false, isBomb: false, isFlagged: false });
     }
     board.push(row);
   }
