@@ -1,5 +1,5 @@
-import { TOGGLE_SQUARE, GENERATE_BOARD, PLANT_FLAG } from './actions';
-import generateBoard from './helpers/generateBoard.js';
+const generateBoard = require('./helpers/generateBoard.js');
+const { TOGGLE_SQUARE, GENERATE_BOARD, PLANT_FLAG } = require('./actions.js');
 
 const initialState = {
   hasWon: false,
@@ -70,4 +70,4 @@ function mineSweeper(state = initialState, action) {
   }
 }
 
-export default mineSweeper;
+module.exports.mineSweeper = mineSweeper;
