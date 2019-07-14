@@ -29,5 +29,4 @@ const generateBoard = () => {
   return board;
 };
 
-console.log(generateBoard());
-// export default generateBoard;
+export default generateBoard;
