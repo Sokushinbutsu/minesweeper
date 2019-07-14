@@ -24,9 +24,9 @@ const generateBoard = () => {
     }
   }
 
-  console.log(mines);
-
   return board;
 };
 
-module.exports.generateBoard = generateBoard;
+module.exports = {
+  generateBoard: generateBoard
+};

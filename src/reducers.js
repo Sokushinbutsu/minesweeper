@@ -1,18 +1,14 @@
-const generateBoard = require('./helpers/generateBoard.js');
-const { TOGGLE_SQUARE, GENERATE_BOARD, PLANT_FLAG } = require('./actions.js');
+const { generateBoard } = require('./helpers/generateBoard.js');
+const { TOGGLE_SQUARE, PLANT_FLAG } = require('./actions.js');
 
 const initialState = {
   hasWon: false,
   hasLost: false,
-  board: []
+  board: generateBoard()
 };
 
 function mineSweeper(state = initialState, action) {
   switch (action.type) {
-    case GENERATE_BOARD:
-      return state({
-        board: generateBoard()
-      });
     case TOGGLE_SQUARE:
       // return Object.assign({}, state, {
       //   board: state.board.map((square, x) => {
