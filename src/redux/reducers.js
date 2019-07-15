@@ -1,5 +1,5 @@
-const { generateBoard } = require('../helpers/generateBoard.js');
-const { TOGGLE_SQUARE, PLANT_FLAG } = require('./actions.js');
+import { generateBoard } from '../helpers/generateBoard.js';
+import { TOGGLE_SQUARE, PLANT_FLAG } from './actions.js';
 
 const initialState = {
   hasWon: false,
