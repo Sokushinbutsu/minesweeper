@@ -1,12 +1,9 @@
 import { connect } from 'react-redux';
-import mineSweeper from '../redux/reducers.js';
 import { toggleSquare, plantFlag } from '../redux/actions.js';
 import Board from '../components/Board.jsx';
 
 const mapStateToProps = state => {
-  return {
-    state: mineSweeper
-  };
+  return state;
 };
 
 const mapDispatchToProps = dispatch => {

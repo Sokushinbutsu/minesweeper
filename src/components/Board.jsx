@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Board = props => {
-  return <p>board</p>;
+  console.log(props);
+  return <p />;
 };
 
 export default Board;
